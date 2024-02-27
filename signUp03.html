@@ -42,46 +42,82 @@
                             <div>
                                 <input type="text">
                             </div>
-                        <li>
+                        </li>
                         <li>
                             <label for="">휴대폰 번호</label>
                             <div>
-                                <input type="text">
-                                <button>인증 번호 전송</button>
+                                <!-- 
+                                    input의 "maxlength" 와 button에 "data-hidden" 설정하면
+                                    최대 입력 길이만큼 입력했을 때 버튼이 나옵니다
+                                    관련 코드
+                                    js/style.js 에서 "인증 버튼 숨기기" 검색
+                                 -->
+                                <input type="text" data-formet="numb" maxlength="11">
+                                <!-- 
+                                    버튼 클릭하면 "인증번호 입력" 리스트 나옵니다  
+                                    관련 코드
+                                    js/style.js 에서 "휴대폰 인증 번호 전송" 검색
+                                -->
+                                <button type="button" class="btn-point" data-hidden data-sandOpen="mobile">인증 번호 전송</button>
                             </div>
-                        <li>
-                        <li>
+                        </li>
+                        <li data-sand="mobile">
                             <label for="">인증번호 입력</label>
                             <div>
-                                <input type="text">
-                                <button>인증하기</button>
+                                <!-- 
+                                    인증 팝업 관련 코드
+                                    js/style.js 에서 "휴대폰 인증" 검색
+                                 -->
+                                <input type="text" data-formet="numb" maxlength="6">
+                                <button type="button" class="btn-point" data-hidden data-authenticate="mobile">인증하기</button>
                             </div>
-                        <li>
+                        </li>
                         <li>
                             <label for="">차량번호</label>
                             <div>
                                 <input type="text" placeholder="7~8자리로 입력해 주세요.">
                             </div>
-                        <li>
+                        </li>
                         <li>
                             <label for="">이메일</label>
                             <div>
                                 <input type="text">
                             </div>
-                        <li>
+                        </li>
                         <li>
                             <label for="">차대번호</label>
                             <div>
+                                <!-- 
+                                    차대 인증 팝업 관련 코드
+                                    js/style.js 에서 "차대번호 인증" 검색
+                                 -->
                                 <input type="text" placeholder="17자리로 입력해 주세요.">
-                                <button>인증하기</button>
+                                <button type="button" class="btn-point" data-authenticate="carNumb">인증하기</button>
                             </div>
-                        <li>
+                        </li>
                         <li>
                             <label for="">출고 딜러사</label>
                             <div>
-                                <input type="text">
+                                <div class="selectBox" data-selectName="dealer">
+                                    <button type="button">선택하세요</button>
+                                    <div>
+                                        <button type="button" data-value="1">선택01</button>
+                                        <button type="button" data-value="2">선택02</button>
+                                        <button type="button" data-value="3">선택03</button>
+                                        <button type="button" data-value="4">선택04</button>
+                                    </div>
+                                </div>
+                                <!-- 
+                                    셀렉트에서 버튼을 클릭하면
+                                    선택한 버튼의 "data-value" 값이 
+                                    input type="hidden" 의 값으로 들어갑니다
+
+                                    selectBox의 data-selectName="dealer" 속성
+                                    data-select="dealer" 속성 매칭
+                                -->
+                                <input type="hidden" data-select="dealer">
                             </div>
-                        <li>
+                        </li>
                     </ul>
                     <input type="checkbox">
                     <label for="">
@@ -90,21 +126,65 @@
                     </label>
                 </fieldset>
                 <div class="btnContainer">
-                    <a href="signUp02.html" class="btn-white">이전 단계</a>
-                    <input type="submit" class="btn-point" value="다음 단계">
+                    <a href="signUp02.html" class="btn-white-big">이전 단계</a>
+                    <!-- <input type="submit" class="btn-point-big" value="다음 단계"> -->
+                    <!-- 기능 개발시 a 태그 삭제 -->
+                    <a href="signUp04.html" class="btn-point-big">다음 단계</a>
                 </div>
             </form>
         </section>
 
-        <div class="popupBox">
+        <div class="popupContainer" data-mobile="complete">
+            <div>
+                <b>휴대폰 인증이 완료되었습니다.</b>
+                <button class="btn-point">확인</button>
+                <button class="icon-close">닫기</button>
+            </div>
+        </div>
+
+        <div class="popupContainer" data-mobile="fail">
+            <div>
+                <b>
+                    인증번호가 일치하지 않습니다.<br/>
+                    (잔여 인증 횟수 : 2회)
+                </b>
+                <button class="btn-point">확인</button>
+                <button class="icon-close">닫기</button>
+            </div>
+        </div>
+
+        <div class="popupContainer" data-mobile="over">
             <div>
                 <b>인증 가능 횟수를 초과하였습니다.</b>
                 <p>
-                    문의사항은 ISP Plus 전담센터
-                    (1800- 8998)로 연락 부탁드립니다.
+                    문의사항은 ISP Plus 전담센터<br/>
+                    <a href="tel:+8215885988">(1588-8988)</a>로 연락 부탁드립니다.
                 </p>
-                <button class="icon-point">확인</button>
-                <button class="btn-point">닫기</button>
+                <button class="btn-point">확인</button>
+                <button class="icon-close">닫기</button>
+            </div>
+        </div>
+
+        <div class="popupContainer" data-carNumb="complete">
+            <div>
+                <b>가입하신 차대번호가 확인되었습니다.</b>
+                <button class="btn-point">확인</button>
+                <button class="icon-close">닫기</button>
+            </div>
+        </div>
+
+        <div class="popupContainer" data-carNumb="fail">
+            <div>
+                <b>
+                    해당 차대번호는 ISP Plus<br/>
+                    전담센터에 확인이 필요합니다.
+                </b>
+                <p>
+                    가입을 원하시면 ISP Plus 전담센터<br>
+                    <a href="tel:+8215885988">(1588-8988)</a>에 연락 부탁드립니다.
+                </p>
+                <button class="btn-point">확인</button>
+                <button class="icon-close">닫기</button>
             </div>
         </div>
 
@@ -145,7 +225,7 @@
             
             <p>COPYRIGHTⒸ All right reserved.</p>
 
-            <a href="tel:">전화 걸기</a>
+            <a href="tel:" class="icon-call">전화 걸기</a>
         </footer>
     </div>
 </body>

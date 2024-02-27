@@ -1,0 +1,95 @@
+/* 기본 셋팅 */
+body{font-family: 'Pretendard'; line-height: 1.25; color: var(--color-font02);}
+h1, h2, h3, h4, h5, h6{font-family: "Nanum Myeongjo";}
+:where(h1, h2, h3, h4, h5, h6){color: white;}
+[class*="Page"] :where(strong, b){color: white;}
+[class*="Page"] :where(strong, b, small){display: block;}
+img{width: 100%;}
+
+
+/* 버튼 */
+[class*="btn-"]{display: block; font-weight: 700; color: white; text-align: center; box-sizing: border-box;}
+[class*="btn-white"]{border-width: 1px; border-style: solid; border-color: var(--color-line01);}
+[class*="btn-point"]{background-color: var(--color-point); border: none;}
+.btn-white{font-size: 13px; border-radius: 2px;}
+.btn-white-big{font-size: 15px; line-height: 50px;}
+.btn-point{font-size: 13px; border-radius: 2px;}
+.btn-point-big{font-size: 15px; line-height: 50px;}
+
+/* 버튼 컨테이너 */
+.btnContainer{display: flex; gap: 10px; margin-top: 60px;}
+.btnContainer > *{flex: 1;}
+
+
+/* 아이콘 */
+[class|="icon"]{aspect-ratio: 1; background-repeat: no-repeat; background-position: center; background-size: cover; font-size: 10px; text-indent: -9999px;}
+.icon-dropDown{background-image: url(../images/icon-dropDwon.png);}
+.icon-close{background-image: url(../images/icon-close.png);}
+.icon-info{background-image: url(../images/icon-info.png);}
+
+
+/* 체크박스 */
+input[type="checkbox"] + label{display: flex; align-items: flex-start; font-size: 15px; line-height: 20px;}
+[class*="Page"] input[type="checkbox"] + label{color: white;}
+input[type="checkbox"] + label::before{content: ''; --styleIdx: 0; width: 20px; aspect-ratio: 1; background: url(../images/icon-check.png) no-repeat left top calc(var(--styleIdx) * 100%) / 100%; flex-shrink: 0; margin-right: 10px;}
+input[type="checkbox"]:checked + label::before{--styleIdx: 1;}
+
+
+/* 리스트 */
+ul.list-square{font-size: 15px; line-height: 20px;}
+ul.list-square li{display: flex;}
+ul.list-square li::before{content: ''; width: 3px; height: 3px; background-color: var(--color-font02); flex-shrink: 0; margin-right: 10px; margin-block: 8.5px;}
+
+
+/* 안내 박스 */
+.infoContanier{background-color: var(--color-face);}
+.infoContanier b{font-size: 15px; line-height: 20px;}
+.infoContanier strong{font-size: 18px; line-height: 20px; font-weight: 700;}
+.infoContanier p{font-size: 14px; line-height: 18px; color: var(--color-font03);}
+
+
+/* 팝업 */
+body:has(.popupContainer.active){overflow: hidden;}
+.popupContainer{display: none; position: fixed; left: 0; top: 0; z-index: 101; width: 100%; height: 100%; justify-content: center; align-items: center; background-color: black;}
+.popupContainer.active{display: flex;}
+.popupContainer > div{width: 302px; padding: 40px 20px 20px; border: 1px solid var(--color-line02); box-sizing: border-box; position: relative;}
+.popupContainer > div b{font-size: 16px; line-height: 22px;}
+.popupContainer > div p{font-size: 14px; line-height: 18px; margin-top: 12px;}
+.popupContainer > div .btn-point{width: 63px; height: 36px; margin-top: 30px; margin-inline: auto;}
+.popupContainer > div .icon-close{position: absolute; right: 5px; top: 5px; width: 32px;}
+
+
+/* 셀렉트 박스 */
+.selectBox{position: relative;}
+.selectBox > *{border: 1px solid var(--color-line02);}
+.selectBox button{width: 100%; font-size: 15px; text-align: left; padding: 15px; background: url(../images/icon-select.png) no-repeat right 10px top 10px / 30px;}
+.selectBox > button{color: white;}
+.selectBox div{display: none; width: 100%; padding-block: 5px; position: absolute; left: 0; top: calc(100% + 5px); background-color: black; z-index: 1;}
+.selectBox.active div{display: block;}
+.selectBox div button:hover{color: white; font-weight: 700;}
+
+
+/* 페이지 공통 */
+[class$="Page"]{background-color: black;}
+[class$="Page"] > section{padding-inline: var(--spacing);}
+[class$="Page"]:not(.mainPage) > section{padding-top: 40px;}
+[class$="Page"]:not(.mainPage) > section h2{font-size: 30px;}
+
+
+/* 해더 */
+header{display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; background-color: black; padding: 12px 15px 12px 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box;}
+header h1{width: 134px;}
+header .btn-white{width: 75px; line-height: 30px; text-align: center;}
+
+/* 푸터 */
+.mainPage footer{margin-top: 130px;}
+[class$="Page"]:not(.mainPage) footer{margin-top: 100px;}
+footer{border-top: 1px solid var(--color-line02); margin-inline: var(--spacing); padding-bottom: 100px;}
+footer ul{display: flex; gap: 30px; margin-bottom: 20px;}
+footer ul li a{font-size: 13px; line-height: 78px; color: white;}
+footer address{font-size: 13px;}
+footer address b{font-size: 700; margin-bottom: 10px;}
+footer address dl{display: flex; line-height: 18px; color: white;}
+footer address dl dt::after{content: ':'; display: inline-block; margin-inline: 0.4em;}
+footer p{font-size: 13px; line-height: 18px; color: var(--color-font03); margin-top: 30px;}
+footer .icon-call{position: fixed; right: 18px; bottom: 30px; width: 50px; background-image: url(../images/icon-call.png);}

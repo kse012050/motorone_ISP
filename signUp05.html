@@ -31,43 +31,46 @@
             </ul>
 
             <form>
-                <fieldset>
-                    <p>고객님의 차대번호로 조회된 정보입니다.</p>
-                    <ol>
+                <fieldset class="inputContanier">
+                    <ul>
                         <li>
-                            <label for=""></label>
+                            <label for="">차량 모델</label>
                             <div>
                                 <input type="text">
                             </div>
+                        </li>
                         <li>
-                        <li>
-                            <label for=""></label>
+                            <label for="">차량 등록일</label>
                             <div>
                                 <input type="text">
                             </div>
+                        </li>
                         <li>
-                        <li>
-                            <label for=""></label>
+                            <label for="">가입 상품</label>
                             <div>
                                 <input type="text">
                             </div>
+                        </li>
                         <li>
-                        <li>
-                            <label for=""></label>
+                            <label for="">가입 상품 가격</label>
                             <div>
                                 <input type="text">
                             </div>
+                        </li>
                         <li>
-                    </ol>
+                            <div class="infoContanier">
+                                <b>서비스 기간 및 서비스 주행거리</b>
+                                <p>보증 연장 서비스는 ISP 만료 이후 개시되며, 차량 등록일 기준 5년 또는 16만km(주행거리) 중 먼저 도래한 시점에 만료됩니다. 정기 점검 서비스 기간 (소모품 교환 서비스 동일)은 ISP 만료 이후 2년 혹은 ISP 만료 시점의 주행거리를 기준으로 추가 30,000km 까지 (선도래 기준) 입니다.</p>
+                            </div>
+                        </li>
+                    </ul>
                     <p>위 가입 및 가격 정보를 확인하였으며, 개인정보 이용 및 결제에 동의합니다.</p>
                 </fieldset>
-                <div class="infoBox">
-                    <b>서비스 기간 및 서비스 주행거리</b>
-                    <p>보증 연장 서비스는 ISP 만료 이후 개시되며, 차량 등록일 기준 5년 또는 16만km(주행거리) 중 먼저 도래한 시점에 만료됩니다. 정기 점검 서비스 기간 (소모품 교환 서비스 동일)은 ISP 만료 이후 2년 혹은 ISP 만료 시점의 주행거리를 기준으로 추가 30,000km 까지 (선도래 기준) 입니다.</p>
-                </div>
                 <div class="btnContainer">
-                    <a href="signUp04.html" class="btn-white">이전 단계</a>
-                    <input type="submit" class="btn-point" value="다음 단계">
+                    <a href="signUp04.html" class="btn-white-big">이전 단계</a>
+                    <!-- <input type="submit" class="btn-point-big" value="결제하기"> -->
+                    <!-- 기능 개발시 a 태그 삭제 -->
+                    <a href="signUp06.html" class="btn-point-big">결제하기</a>
                 </div>
             </form>
         </section>
@@ -109,7 +112,7 @@
             
             <p>COPYRIGHTⒸ All right reserved.</p>
 
-            <a href="tel:">전화 걸기</a>
+            <a href="tel:" class="icon-call">전화 걸기</a>
         </footer>
     </div>
 </body>

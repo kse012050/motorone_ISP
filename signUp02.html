@@ -22,7 +22,7 @@
         <section>
             <small>가입하기 02</small>
             <h2>
-                개인 정보 수집 및
+                개인 정보 수집 및<br/>
                 이용 동의
             </h2>
             <ul class="list-square">
@@ -32,35 +32,46 @@
 
             <form>
                 <fieldset>
-                    <input type="checkbox">
-                    <label for="">전체 동의</label>
+                    <input type="checkbox" id="allCheck">
+                    <label for="allCheck">전체 동의</label>
                     <ul>
                         <li>
                             <div>
-                                <input type="checkbox">
-                                <label for="">개인정보 수집 및 이용에 대한 동의 (필수)</label>
-                                <button type="button">상세 내용 열기 / 닫기</button>
+                                <input type="checkbox" id="a">
+                                <label for="a">개인정보 수집 및 이용에 대한 동의 (필수)</label>
+                                <button type="button" class="icon-dropDown" data-dropDown="use">상세 내용 열기 / 닫기</button>
                             </div>
-                        <li>
+                            <div data-drop="use">
+                                개인정보 수집 및 이용
+                            </div>
                         </li>
-                            <div>
-                                <input type="checkbox">
-                                <label for="">개인정보의 제3자 제공에 대한 동의 (필수)</label>
-                                <button type="button">상세 내용 열기 / 닫기</button>
-                            </div>
                         <li>
-                        </li> 
                             <div>
-                                <input type="checkbox">
-                                <label for="">서비스 이용약관에 대한 동의 (필수)</label>
-                                <button type="button">상세 내용 열기 / 닫기</button>
+                                <input type="checkbox" id="b">
+                                <label for="b">개인정보의 제3자 제공에 대한 동의 (필수)</label>
+                                <button type="button" class="icon-dropDown" data-dropDown="offer">상세 내용 열기 / 닫기</button>
+                            </div>
+                            <div data-drop="offer">
+                                개인정보 수집 및 이용
+                            </div>
+                        </li>
+                        <li> 
+                            <div>
+                                <input type="checkbox" id="c">
+                                <label for="c">서비스 이용약관에 대한 동의 (필수)</label>
+                                <button type="button" class="icon-dropDown" data-dropDown="terms">상세 내용 열기 / 닫기</button>
+                            </div>
+                            <div data-drop="terms">
+                                개인정보 수집 및 이용
                             </div>
                         </li>
                     </ul>
                 </fieldset>
                 <div class="btnContainer">
-                    <a href="signUp01.html" class="btn-white">이전 단계</a>
-                    <input type="submit" class="btn-point" value="다음 단계">
+                    <a href="signUp01.html" class="btn-white-big">이전 단계</a>
+                    <!-- <input type="submit" class="btn-point-big" value="다음 단계"> -->
+                    <!-- 기능 개발시 a 태그 삭제 -->
+                    <a href="signUp03.html" class="btn-point-big">다음 단계</a>
                 </div>
             </form>
         </section>
@@ -102,7 +113,7 @@
             
             <p>COPYRIGHTⒸ All right reserved.</p>
 
-            <a href="tel:">전화 걸기</a>
+            <a href="tel:" class="icon-call">전화 걸기</a>
         </footer>
     </div>
 </body>

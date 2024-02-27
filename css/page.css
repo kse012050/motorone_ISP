@@ -1,0 +1,134 @@
+/* 메인 페이지 */
+.mainPage > section{background: url(../images/main-img.png) no-repeat center top / 100%;}
+.mainPage > section h2{font-size: 36px; line-height: 1.25; padding-top: 102.2223vw; margin-bottom: 20px;}
+.mainPage > section > p{line-height: 22px;}
+.mainPage > section > p:first-of-type{line-height: 22px; margin-bottom: 148px;}
+.mainPage > section .plusArea{margin-bottom: 130px;}
+.mainPage > section .plusArea h3{font-size: 26px; line-height: 34px; margin-bottom: 20px;}
+.mainPage > section .plusArea > p{font-size: 15px; line-height: 20px;}
+.mainPage > section .plusArea figure{margin-top: 30px;}
+.mainPage > section .plusArea figure img{margin-bottom: 30px;}
+.mainPage > section .plusArea figure figcaption{font-size: 13px; line-height: 18px;}
+.mainPage > section .plusArea figure figcaption p{margin-top: 7px;}
+.mainPage > section ol{margin-bottom: 130px;}
+.mainPage > section ol > li:not(:last-child){margin-bottom: 100px;}
+.mainPage > section ol > li small{font-size: 13px; margin-bottom: 20px;}
+.mainPage > section ol > li h3{font-size: 26px; line-height: 34px;}
+.mainPage > section ol > li :is(p, ul){font-size: 15px; margin-top: 20px;}
+.mainPage > section ol > li p{line-height: 20px;}
+.mainPage > section ol > li ul{line-height: 22px;}
+.mainPage > section ol > li::after{content: ''; display: block; aspect-ratio: 324 / 380; background-repeat: no-repeat; background-position: center; background-size: cover; margin-top: 30px;}
+.mainPage > section ol > li:nth-child(1)::after{background-image: url(../images/main-img01.png);}
+.mainPage > section ol > li:nth-child(2)::after{background-image: url(../images/main-img02.png);}
+.mainPage > section ol > li:nth-child(3)::after{background-image: url(../images/main-img03.png);}
+.mainPage > section > p:last-of-type{font-size: 15px; color: white; text-align: center; margin-bottom: 20px;}
+.mainPage > section .btn-white{width: 165px; line-height: 34px; margin: 0 auto 100px;}
+
+
+/* 가입 시 유의사항 */
+.noticePage section > *:not(h2, ul, .btn-point-big){line-height: 22px;}
+.noticePage section b{font-weight: 700; margin-top: 60px; margin-bottom: 20px;}
+.noticePage section :is(p, ol){font-size: 15px;}
+.noticePage section ul li:not(:last-child){margin-bottom: 15px;}
+.noticePage section .btn-point-big{margin-top: 60px;}
+
+
+/* 가입하기 공통 */
+[class*="signUp"][class*="Page"] section small{font-size: 14px; margin-bottom: 15px;}
+[class*="signUp"][class*="Page"] section h2 + .list-square{margin-top: 30px; margin-bottom: 80px;}
+[class*="signUp"][class*="Page"] section .list-square li:not(:last-child){margin-bottom: 12px;}
+[class*="signUp"][class*="Page"] section fieldset > input[type="checkbox"]:first-child + label{font-weight: 700; margin-bottom: 25px;}
+[class*="signUp"][class*="Page"] section fieldset.inputContanier ul{padding-block: 30px; border-width: 1px 0; border-style: solid; border-color: var(--color-line02) transparent var(--color-line03);}
+[class*="signUp"][class*="Page"] section fieldset.inputContanier ul li:not(:last-child){margin-bottom: 30px;}
+[class*="signUp"][class*="Page"] section fieldset.inputContanier ul li[data-sand="mobile"]{display: none;}
+[class*="signUp"][class*="Page"] section fieldset.inputContanier ul li[data-sand="mobile"].active{display: block;}
+[class*="signUp"][class*="Page"] section fieldset.inputContanier ul li > label:first-child{display: block; font-size: 14px; line-height: 17px; margin-bottom: 12px;}
+[class*="signUp"][class*="Page"] section fieldset.inputContanier ul li > div input{font-size: 15px; color: white; width: 100%; height: 50px; border: 1px solid var(--color-line02); padding-inline: 15px; background-color: transparent; box-sizing: border-box;}
+[class*="signUp"][class*="Page"] section fieldset.inputContanier ul li > div input::placeholder{color: var(--color-line01);}
+[class*="signUp"][class*="Page"] section fieldset.inputContanier ul li > div:has( > button){position: relative;}
+[class*="signUp"][class*="Page"] section fieldset.inputContanier ul li > div > button{position: absolute; right: 7px; top: 50%; transform: translateY(-50%);}
+[class*="signUp"][class*="Page"] section fieldset.inputContanier ul li > div .btn-point{height: 36px; padding-inline: 12px;}
+[class*="signUp"][class*="Page"] section fieldset.inputContanier ul li > div .btn-point[data-hidden]{display: none;}
+
+/* 가입하기 01 */
+.signUp01Page section fieldset p{font-size: 14px; line-height: 20px; margin-top: 20px;}
+
+/* 가입하기 02 */
+.signUp02Page section fieldset ul{border-top: 1px solid var(--color-line02);}
+.signUp02Page section fieldset ul li{border-bottom: 1px solid var(--color-line03);}
+.signUp02Page section fieldset ul li > div:first-child{height: 70px; display: flex; justify-content: space-between; align-items: center;}
+.signUp02Page section fieldset ul li > div:first-child .icon-dropDown{width: 30px; flex-shrink: 0;}
+.signUp02Page section fieldset ul li > [data-drop]{display: none; font-size: 13px; line-height: 18px; width: 100%; height: 180px; border: 1px solid var(--color-line03); padding: 10px; box-sizing: border-box; overflow: auto;}
+
+/* 가입하기 03 */
+.signUp03Page section fieldset > label{margin-top: 25px;}
+.signUp03Page .popupContainer > div{text-align: center;}
+
+/* 가입하기 04 */
+.signUp04Page section h2{margin-bottom: 80px;}
+.signUp04Page section fieldset:not(:last-of-type){margin-bottom: 60px;}
+.signUp04Page section fieldset p{font-size: 15px; line-height: 20px; margin-bottom: 30px;}
+.signUp04Page section fieldset ol li{padding-left: 34px; counter-increment: signUp04; display: flex; flex-wrap: wrap; gap: 10px; position: relative;}
+.signUp04Page section fieldset ol li:not(:last-child){padding-bottom: 30px;}
+.signUp04Page section fieldset ol li::before{content: counter(signUp04); position: absolute; left: 0; top: 0; font-size: 14px; font-weight: 700; color: var(--color-point); width: 22px; aspect-ratio: 1; background-color: var(--color-line03); display: flex; justify-content: center; align-items: center; border-radius: 100%; z-index: 1;}
+.signUp04Page section fieldset:nth-of-type(2) ol{counter-reset: signUp04 3;}
+.signUp04Page section fieldset ol li:not(:last-child):after{content: ''; position: absolute; left: 10.5px; top: 0; width: 1px; height: 100%; background-color: var(--color-line03);}
+.signUp04Page section fieldset ol li > label:first-child{width: 100%; font-size: 15px; font-weight: 700; color: white;}
+.signUp04Page section fieldset ol li > div{width: calc((100% - 20px) / 3);}
+.signUp04Page section fieldset ol li > div input[type="radio"] + label{font-size: 14px; line-height: 16px; text-align: center; display: flex; justify-content: center; align-items: center; padding-inline: 10px; border-width: 1px; border-style: solid;}
+.signUp04Page section fieldset ol li > div input[type="radio"]:checked + label{font-weight: 700; border-color: var(--color-point);}
+.signUp04Page section fieldset ol li > div:has(button){position: relative;}
+.signUp04Page section fieldset ol li > div .icon-info{position: absolute; right: 5px; top: 5px; width: 18px;}
+.signUp04Page section fieldset:first-of-type ol li > div input[type="radio"] + :where(label){height: 60px; color: var(--color-line01); border-color: var(--color-line02);}
+.signUp04Page section fieldset:first-of-type ol li > div input[type="radio"]:checked + label{color: var(--color-point);}
+.signUp04Page section fieldset:nth-of-type(2) ol li > div input[type="radio"] + :where(label){height: 90px; color: white; border-color: var(--color-line01);}
+.signUp04Page section fieldset:nth-of-type(2) ol li > div input[type="radio"]:checked + label{background-color: var(--color-point);}
+.signUp04Page section .infoContanier{margin-block: 60px;}
+.signUp04Page section .infoContanier.price{display: flex; justify-content: space-between; align-items: center; padding: 20px 15px;}
+.signUp04Page section .infoContanier.price p{color: var(--color-font02);}
+.signUp04Page section .infoContanier.fail{padding-block: 60px; text-align: center;}
+.signUp04Page section .infoContanier.fail b{margin-bottom: 12px;}
+.signUp04Page .popupContainer > div b{margin-bottom: 20px;}
+
+/* 가입하기 05 */
+.signUp05Page section fieldset ul li .infoContanier{padding: 20px;}
+.signUp05Page section fieldset ul li .infoContanier b{color: var(--color-font02); margin-bottom: 20px;}
+.signUp05Page section fieldset > p{font-size: 15px; line-height: 20px; color: white; margin-top: 25px;}
+
+/* 가입하기 06 */
+.signUp06Page section p{font-size: 15px; line-height: 20px; color: white; text-align: center;}
+.signUp06Page section p:first-of-type{padding-top: 150px; background: url(../images/img-complete.png) no-repeat center top / 120px;}
+.signUp06Page section p:not(:last-of-type){margin-bottom: 12px;}
+
+
+/* 서비스 약관 */
+.termsPage section h2{margin-bottom: 40px;}
+.termsPage section b{color: var(--color-font02); font-weight: 700; margin-bottom: 18px;}
+.termsPage section > p{margin-bottom: 18px;}
+.termsPage section > ol > li{counter-increment: terms;}
+.termsPage section > ol > li:not(:last-child){margin-bottom: 18px;}
+.termsPage section > ol > li span::before{content: '제' counter(terms)'조 (';}
+.termsPage section > ol > li span::after{content: ')';}
+.termsPage section > ol > li ol li{counter-increment: terms2;}
+.termsPage section > ol > li ol li::before{content: counter(terms2)'. ';}
+
+
+/* 인증서 공통 */
+[class*="guarantee"] > *{padding-inline: var(--spacing);}
+[class*="guarantee"] section{background-color: black; height: 240px; padding-block: 40px 20px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;}
+[class*="guarantee"] section h2{font-size: 30px;}
+[class*="guarantee"] section .logoContanier{display: flex; justify-content: space-between; align-items: flex-end;}
+[class*="guarantee"] section .logoContanier img[src*="text"]{max-width: 123px; margin-bottom: 10px;}
+[class*="guarantee"] section .logoContanier img[src*="symbol"]{max-width: 50px;}
+[class*="guarantee"] > div{color: black; padding-block: 40px;}
+[class*="guarantee"] div ol{font-size: 14px; line-height: 18px;}
+[class*="guarantee"] div ol li{counter-increment: guarantee; display: flex;}
+[class*="guarantee"] div ol li:not(:last-child){margin-bottom: 20px;}
+[class*="guarantee"] div ol li::before{content: counter(guarantee) '. ';}
+[class*="guarantee"] div ul{font-size: 15px; margin-top: 40px; padding-inline: 20px; background-color: #F8F8F8;}
+[class*="guarantee"] div ul li{padding-block: 25px;}
+[class*="guarantee"] div ul li:not(:last-child){border-bottom: 1px solid #eee;}
+[class*="guarantee"] div ul li small{display: block; font-size: 14px; color: var(--color-line01); margin-bottom: 7px;}
+[class*="guarantee"] div ul li b{font-weight: 700;}
+[class*="guarantee"] div ul li div{display: flex; flex-wrap: wrap; gap: 10px 20px;}
+[class*="guarantee"] div ul li div input[type="checkbox"]:checked + label{font-weight: 700;}
