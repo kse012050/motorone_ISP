@@ -93,7 +93,10 @@
                     <p>가입하실 상품 유형을 선택하세요.</p>
                     <ol>
                         <li>
-                            <label for="">서비스 플랜 1</label>
+                            <label for="">
+                                <b>Warranty</b>
+                                보증받으실 부품 범위를 선택하세요.
+                            </label>
                             <div>
                                 <input type="radio" checked>
                                 <label for="">파워트레인</label>
@@ -106,20 +109,27 @@
                             </div>
                         </li>
                         <li>
-                            <label for="">서비스 플랜 2</label>
+                            <label for="">
+                                <b>Maintenance</b>
+                                (정기점검/ 소모품) 케어 서비스 범위를 선택하세요.
+                            </label>
                             <div>
                                 <input type="radio" checked>
                                 <label for="">선택 안함</label>
                             </div>
                             <div>
                                 <input type="radio">
-                                <label for="">서비스(A)</label>
-                                <button type="button" class="icon-info" data-popupOpen="serviceA">서비스(A) 정보 보기</button>
+                                <label for="">서비스( I )</label>
+                                <button type="button" class="icon-info" data-popupOpen="serviceA">서비스(I) 정보 보기</button>
                             </div>
                             <div>
                                 <input type="radio">
-                                <label for="">서비스(A)+ 서비스(B)</label>
-                                <button type="button" class="icon-info" data-popupOpen="serviceAB">서비스(A) + 서비스(B) 정보 보기</button>
+                                <label for="">
+                                    서비스( I )
+                                    <br/>+<br/>
+                                    서비스( II )
+                                </label>
+                                <button type="button" class="icon-info" data-popupOpen="serviceAB">서비스(I) + 서비스(II) 정보 보기</button>
                             </div>
                         </li>
                     </ol>
@@ -142,49 +152,66 @@
                     </p>
                 </div>
                 <div class="btnContainer">
-                    <a href="signUp03.html" class="btn-white-big">이전 단계</a>
-                    <!-- <input type="submit" class="btn-point-big" value="다음 단계"> -->
+                    <a href="signUp03.html" class="btn-white-big">이전</a>
+                    <!-- <input type="submit" class="btn-point-big" value="다음"> -->
                     <!-- 기능 개발시 a 태그 삭제 -->
-                    <a href="signUp05.html" class="btn-point-big">다음 단계</a>
+                    <a href="signUp05.html" class="btn-point-big">다음</a>
                 </div>
             </form>
         </section>
 
         <div class="popupContainer" data-popup="train">
             <div>
+                <strong>파워트레인</strong>
                 <b>
-                    파워트레인<br/>
-                    (엔진 및 동력전달 계통 주요부품)
+                    자동차의 핵심 구성요소인 엔진 ~ 구동바퀴 사이의
+                    기관을 말합니다.
                 </b>
-                <p>엔진 하우징, 엔진 크랭크 어셈블리, 엔진 제어 시스템</p>
-                <p>엔진 연료 공급 및 분사 장치, 엔진 배기 및 흡기 장치</p>
-                <p>엔진 과급장치, 엔진 전기 장치, 엔진 윤활 장치, 엔진 냉각</p>
-                <p>엔진/변속기 서스펜션, 자동 변속기, 트랜스퍼 케이스, 앞차축, 뒤차축, 드라이브 샤프트, 파워트레인의 냉각 장치, 파워트레인의 전기 장치</p>
+                <p>ex&#41; 엔진, 변속기, 동력전달장치 등</p>
+                <span>자세한 보증범위는 서비스 이용약관을 참조 부탁드립니다.</span>
                 <button class="icon-close">닫기</button>
             </div>
         </div>
 
         <div class="popupContainer" data-popup="part">
             <div>
-                <b>전체부품</b>
-                <p>파워트레인 (엔진 및 동력전달 계통 주요부품) + 차체 및 일반부품 (현가장치, 조향장치, 전기•전자장치 등)</p>
+                <strong>전체 부품 </strong>
+                <b>
+                    신차 구매시 제공하는 제조사 보증과 동일한 범위로 차량 내 전체 부품을
+                    말합니다.
+                </b>
+                <p>ex&#41; 파워트레인 + 차체, 현가장치, 조향장치, 전기 • 전자장치 등</p>
+                <span>자세한 보증범위는 서비스 이용약관을 참조 부탁드립니다.</span>
                 <button class="icon-close">닫기</button>
             </div>
         </div>
 
         <div class="popupContainer" data-popup="serviceA">
             <div>
-                <b>서비스(A)</b>
-                <p>차종에 따라 메르세데스-벤츠 코리아가 규정한 정기점검 서비스 시트상 점검주기에 따른 주기적 점검 및 부품(예: 엔진오일, 필터 등) 교환 서비스</p>
+                <strong>서비스(I)</strong>
+                <b>점기점검 및 소모품 교체서비스 제공</b>
+                <ol>
+                    <li>① 엔진, 차축 및 서스펜션, 브레이크, 차량하체 등 공인 테크니션 점검</li>
+                    <li>② 엔진 오일, 오일 필터, 분진필터, 카본필터, 미션오일, 점화플러그, 브레이크액 등 교환</li>
+                </ol>
                 <button class="icon-close">닫기</button>
             </div>
         </div>
 
         <div class="popupContainer" data-popup="serviceAB">
             <div>
-                <b>서비스(A) + 서비스(B)</b>
-                <p>서비스(A) : 차종에 따라 메르세데스-벤츠 코리아가 규정한 정기점검 서비스 시트상 점검주기에 따른 주기적 점검 및 부품(예: 엔진오일, 필터 등) 교환 서비스</p>
-                <p>서비스(B) : 차종별로 메르세데스-벤츠 코리아가 규정한 기준에 따라 브레이크 패드, 브레이크 디스크, 와이퍼 블레이드가 마모되었을 경우 제공되는 부품 교체 서비스 </p>
+                <strong>서비스(I) + 서비스(II)</strong>
+                <b>점기점검 및 소모품 교체서비스 제공 + 제동장치 부품 교환</b>
+                <b>서비스(I)</b>
+                <ol>
+                    <li>① 엔진, 차축 및 서스펜션, 브레이크, 차량하체 등 공인 테크니션 점검</li>
+                    <li>② 엔진 오일, 오일 필터, 분진필터, 카본필터, 미션오일, 점화플러그, 브레이크액 등 교환</li>
+                </ol>
+                <b>서비스(II)</b>
+                <ol>
+                    <li>① 브레이크 패드 및 디스크</li>
+                    <li>② 와이퍼 블레이드</li>
+                </ol>
                 <button class="icon-close">닫기</button>
             </div>
         </div>
@@ -194,6 +221,7 @@
                 <li><a href="">서비스 약관</a></li>
                 <li><a href="">사이트 이용 약관</a></li>
                 <li><a href="">개인정보처리방침</a></li>
+                <li><a href="cencel.html">해지 신청</a></li>
             </ul>
 
             <address>
@@ -212,7 +240,7 @@
                 </dl>
                 <dl>
                     <dt>대표전화</dt>
-                    <dd><a href="tel:+82188-8998">1800-8998</a></dd>
+                    <dd><a href="tel:18808998">1800-8998</a></dd>
                 </dl>
                 <dl>
                     <dt>주소</dt>
@@ -226,7 +254,7 @@
             
             <p>COPYRIGHTⒸ All right reserved.</p>
 
-            <a href="tel:" class="icon-call">전화 걸기</a>
+            <a href="tel:18808998" class="icon-call">전화 걸기</a>
         </footer>
     </div>
 </body>

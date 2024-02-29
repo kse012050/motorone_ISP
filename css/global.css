@@ -54,7 +54,7 @@ body:has(.popupContainer.active){overflow: hidden;}
 .popupContainer.active{display: flex;}
 .popupContainer > div{width: 302px; padding: 40px 20px 20px; border: 1px solid var(--color-line02); box-sizing: border-box; position: relative;}
 .popupContainer > div b{font-size: 16px; line-height: 22px;}
-.popupContainer > div p{font-size: 14px; line-height: 18px; margin-top: 12px;}
+.popupContainer > div :is(p, ol, span){font-size: 14px; line-height: 18px;}
 .popupContainer > div .btn-point{width: 63px; height: 36px; margin-top: 30px; margin-inline: auto;}
 .popupContainer > div .icon-close{position: absolute; right: 5px; top: 5px; width: 32px;}
 
@@ -62,8 +62,8 @@ body:has(.popupContainer.active){overflow: hidden;}
 /* 셀렉트 박스 */
 .selectBox{position: relative;}
 .selectBox > *{border: 1px solid var(--color-line02);}
-.selectBox button{width: 100%; font-size: 15px; text-align: left; padding: 15px; background: url(../images/icon-select.png) no-repeat right 10px top 10px / 30px;}
-.selectBox > button{color: white;}
+.selectBox button{width: 100%; font-size: 15px; text-align: left; padding: 15px;}
+.selectBox > button{color: white; background: url(../images/icon-select.png) no-repeat right 10px top 10px / 30px;}
 .selectBox div{display: none; width: 100%; padding-block: 5px; position: absolute; left: 0; top: calc(100% + 5px); background-color: black; z-index: 1;}
 .selectBox.active div{display: block;}
 .selectBox div button:hover{color: white; font-weight: 700;}
@@ -84,11 +84,12 @@ header .btn-white{width: 75px; line-height: 30px; text-align: center;}
 /* 푸터 */
 .mainPage footer{margin-top: 130px;}
 [class$="Page"]:not(.mainPage) footer{margin-top: 100px;}
-footer{border-top: 1px solid var(--color-line02); margin-inline: var(--spacing); padding-bottom: 100px;}
-footer ul{display: flex; gap: 30px; margin-bottom: 20px;}
-footer ul li a{font-size: 13px; line-height: 78px; color: white;}
+footer{border-top: 1px solid var(--color-line02); margin-inline: var(--spacing); padding-block: 20px 62px;}
+footer ul{display: flex; flex-wrap: wrap; gap: 0 30px; margin-bottom: 40px;}
+footer ul li a{font-size: 13px; line-height: 38px; color: white;}
+footer ul li:last-child{width: 100%;}
 footer address{font-size: 13px;}
-footer address b{font-size: 700; margin-bottom: 10px;}
+footer address b{font-weight: 700; margin-bottom: 10px;}
 footer address dl{display: flex; line-height: 18px; color: white;}
 footer address dl dt::after{content: ':'; display: inline-block; margin-inline: 0.4em;}
 footer p{font-size: 13px; line-height: 18px; color: var(--color-font03); margin-top: 30px;}

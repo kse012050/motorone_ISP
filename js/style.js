@@ -57,11 +57,11 @@ function popupAuthenticate(){
     // 휴대폰 인증
     $('[data-authenticate="mobile"]').click(function(){
         // 인증 성공
-        $('[data-mobile="complete"]').addClass('active')
+        // $('[data-mobile="complete"]').addClass('active')
         // 인증 실패
         // $('[data-mobile="fail"]').addClass('active')
         // 인증 횟수 초과
-        // $('[data-mobile="over"]').addClass('active')
+        $('[data-mobile="over"]').addClass('active')
     })
 
     // 차대번호 인증

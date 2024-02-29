@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=0">
     <!-- Iphone 모바일 확대 방지  maximum-scale=1.0, user-scalable=0-->
-    <title>가입하기03 - 모터원 ISP 플러스</title> 
+    <title>해지 신청 - 모터원 ISP 플러스</title> 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/style.js"></script>
     <link rel="stylesheet" href="css/import.css">
 </head>
 <body>
-    <div class="signUp03Page">
+    <div class="cencelPage">
         <header>
             <h1>
                 <a href="index.html"><img src="images/logo.png" alt="Mercedes-Benz"></a>
@@ -20,22 +20,44 @@
         </header>
 
         <section>
-            <small>가입하기 03</small>
-            <h2>고객 정보 입력</h2>
+            <h2>
+                Warranty / ISP Plus<br/>
+                해지 신청
+            </h2>
+            
             <ul class="list-square">
-                <li>
-                    상품 가입을 위해 고객님의 정보를 입력하여 주세요.
-                    (모터원 온라인 스토어에 자동 회원가입이 됩니다)
-                </li>
-                <li>
-                    차량등록일 90일 초과 고객은 ISP Plus 전담센터 
-                    (1800-8998)로 연락 부탁드립니다. 
-                </li>
-                <li>가입 항목을 모두 작성해 주셔야 가입이 가능합니다.</li>
+                <li>상품 해지를 위해 필수 동의를 받고 있어요.</li>
             </ul>
 
             <form>
+                <fieldset class="agree">
+                    <input type="checkbox" id="allCheck">
+                    <label for="allCheck">전체 동의</label>
+                    <ul>
+                        <li>
+                            <div>
+                                <input type="checkbox" id="a">
+                                <label for="a">개인정보 수집 및 이용에 대한 동의 (필수)</label>
+                                <button type="button" class="icon-dropDown" data-dropDown="use">상세 내용 열기 / 닫기</button>
+                            </div>
+                            <div data-drop="use">
+                                개인정보 수집 및 이용
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input type="checkbox" id="b">
+                                <label for="b">개인정보의 제3자 제공에 대한 동의 (필수)</label>
+                                <button type="button" class="icon-dropDown" data-dropDown="offer">상세 내용 열기 / 닫기</button>
+                            </div>
+                            <div data-drop="offer">
+                                개인정보 수집 및 이용
+                            </div>
+                        </li>
+                    </ul>
+                </fieldset>
                 <fieldset class="inputContanier">
+                    <b>수집 항목</b>
                     <ul>
                         <li>
                             <label for="">이름</label>
@@ -79,32 +101,22 @@
                             </div>
                         </li>
                         <li>
-                            <label for="">이메일</label>
-                            <div>
-                                <input type="text">
-                            </div>
-                        </li>
-                        <li>
                             <label for="">차대번호</label>
                             <div>
-                                <!-- 
-                                    차대 인증 팝업 관련 코드
-                                    js/style.js 에서 "차대번호 인증" 검색
-                                 -->
                                 <input type="text" placeholder="17자리로 입력해 주세요.">
-                                <button type="button" class="btn-point" data-authenticate="carNumb">인증하기</button>
                             </div>
                         </li>
                         <li>
-                            <label for="">출고 딜러사</label>
+                            <label for="">해지사유</label>
                             <div>
                                 <div class="selectBox" data-selectName="dealer">
                                     <button type="button">선택하세요</button>
                                     <div>
-                                        <button type="button" data-value="1">선택01</button>
-                                        <button type="button" data-value="2">선택02</button>
-                                        <button type="button" data-value="3">선택03</button>
-                                        <button type="button" data-value="4">선택04</button>
+                                        <button type="button" data-value="1">단순변심</button>
+                                        <button type="button" data-value="2">상품 재가입</button>
+                                        <button type="button" data-value="3">결제카드변경</button>
+                                        <button type="button" data-value="4">차량판매</button>
+                                        <button type="button" data-value="5">기타</button>
                                     </div>
                                 </div>
                                 <!-- 
@@ -119,17 +131,13 @@
                             </div>
                         </li>
                     </ul>
-                    <input type="checkbox">
-                    <label for="">
-                        모터원 온라인 스토어 회원가입 및 이용약관에 
-                        동의합니다.
-                    </label>
+                    <p>위와 같이 서비스 상품 해지를 신청합니다.</p>
                 </fieldset>
                 <div class="btnContainer">
-                    <a href="signUp02.html" class="btn-white-big">이전</a>
-                    <!-- <input type="submit" class="btn-point-big" value="다음"> -->
+                    <a href="index.html" class="btn-white-big">취소</a>
+                    <!-- <input type="submit" class="btn-point-big" value="해지 신청"> -->
                     <!-- 기능 개발시 a 태그 삭제 -->
-                    <a href="signUp04.html" class="btn-point-big">다음</a>
+                    <a href="cencelFin.html" class="btn-point-big">해지 신청</a>
                 </div>
             </form>
         </section>
